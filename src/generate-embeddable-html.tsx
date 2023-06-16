@@ -32,17 +32,22 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     </style>
   </head>
   <body>
-  <div id="interactive-container" tabindex="0"></div>
-  <script src="${labDistPath}lab/lab.min.js"></script>
-  <script>
-    Lab.config.rootUrl = "${labDistPath}lab";
-    // sharing won't work so disable it
-    Lab.config.sharing = false;
-    // Keep Embeddable namespace to be consistent with lab/embeddable.html
-    window.Embeddable = {
-      controller: new Lab.InteractivesController(null, '#interactive-container')
-    };
-  </script>
-  </body>
+    <header id="siteHeader">
+      <figure class="logo">
+        <img src="${labDistPath}lab/images/logo.png" alt="LabOnWeb">
+      </figure>
+    </header>
+    <div id="interactive-container" tabindex="0"></div>
+    <script src="${labDistPath}lab/lab.js"></script>
+    <script>
+      Lab.config.rootUrl = "${labDistPath}lab";
+      // sharing won't work so disable it
+      Lab.config.sharing = false;
+      // Keep Embeddable namespace to be consistent with lab/embeddable.html
+      window.Embeddable = {
+        controller: new Lab.InteractivesController(null, '#interactive-container')
+      };
+    </script>
+    </body>
   </html>
 `;
