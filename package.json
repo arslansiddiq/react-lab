@@ -10,7 +10,7 @@
     "Lab",
     "React"
   ],
-  "precommit": "npm run build",
+  "precommit": "webpack",
   "scripts": {
     "build": "webpack",
     "prepublishOnly": "webpack"
