@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>Lab Interactive</title>
+    <link href="lab/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="lab/lab-fonts.css" rel="stylesheet">
+    <link href="lab/lab.css" rel="stylesheet">
+    <link href="embeddable.css" rel="stylesheet">
+    <link href='themes/cc-themes.css' rel='stylesheet' type='text/css'>
+    <script src="lab/vendor/jquery/jquery.min.js"></script>
+    <script src="lab/vendor/jquery-ui/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="interactive-container" tabindex="0"></div>
+<script src="lab/lab.min.js"></script>
+<script src="embeddable.js"></script>
+<script>(function () {
+  var interactiveUrl,
+    hash = window.location.hash;
+
+  $(window).bind('hashchange', function () {
+    if (window.location.hash !== hash) {
+      location.reload();
+    }
+  });
+
+  Lab.config.rootUrl = "lab";
+  interactiveUrl = hash.substr(1, hash.length) || null;
+  Embeddable.load(interactiveUrl, '#interactive-container', {
+    controllerReady: function (controller) {
+      controller.on("modelLoaded.application", function () {
+        document.title = "Lab Interactive: " + controller.interactive.title;
+        Embeddable.sendGAPageview();
+      });
+      controller.on("interactiveRequested.application", function (newUrl) {
+        window.location.hash = newUrl;
+      });
+    },
+    redirect: function (path) {
+      // Let our parent know we are redirecting
+      if (window.parent) {
+        window.parent.postMessage(JSON.stringify({type: "redirect", content: path}), '*');
+      }
+      location.hash = "#" + path;
+    }
+  });
+}());</script>
+</body>
+</html>
