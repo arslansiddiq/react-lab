@@ -16,7 +16,7 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     <link href='${labDistPath}themes/cc-themes.css' rel='stylesheet' type='text/css'>
     <script src="${labDistPath}lab/vendor/jquery/jquery.min.js"></script>
     <script src="${labDistPath}lab/vendor/jquery-ui/jquery-ui.min.js"></script>
-    // <script src="${labDistPath}embeddable.js"></script>
+    <script src="${labDistPath}embeddable.js"></script>
     <title>LAB on WEB</title>
     <style>
       * {
