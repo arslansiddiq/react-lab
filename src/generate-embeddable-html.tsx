@@ -74,8 +74,12 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     <!-- Modal to display the temp data -->
     <div id="tempModal">
       <div id="modalButtonContainer">
-        <button id="copy-button">Copy the data</button>
-        <button id="close">Close</button>
+        <button id="copy-button" title="Copy Data">
+          <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'><path d='M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z'/></svg>
+        </button>
+        <button id="close" title="Close">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><polygon fill-rule='evenodd' points='8 9.414 3.707 13.707 2.293 12.293 6.586 8 2.293 3.707 3.707 2.293 8 6.586 12.293 2.293 13.707 3.707 9.414 8 13.707 12.293 12.293 13.707 8 9.414'/></svg>
+        </button>
       </div>
       <div id="tempModal-content">
         <h3>Temperature (°C)</h3>
@@ -89,8 +93,12 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     </div>
     <div id="velocityModal">
       <div id="modalButtonContainer">
-        <button id="velocity-copy-button">Copy the data</button>
-        <button id="velocity-close">Close</button>
+        <button id="velocity-copy-button" title="Copy Data">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'><path d='M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z'/></svg>
+        </button>
+        <button id="velocity-close" title="Close">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><polygon fill-rule='evenodd' points='8 9.414 3.707 13.707 2.293 12.293 6.586 8 2.293 3.707 3.707 2.293 8 6.586 12.293 2.293 13.707 3.707 9.414 8 13.707 12.293 12.293 13.707 8 9.414'/></svg>
+        </button>
       </div>
       <div id="velocityModal-content">
         <h3>Velocity (m/s)</h3>
@@ -104,8 +112,12 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     </div>
     <div id="pressureModal">
       <div id="modalButtonContainer">
-        <button id="pressure-copy-button">Copy the data</button>
-        <button id="pressure-close">Close</button>
+        <button id="pressure-copy-button" title="Copy Data">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'><path d='M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z'/></svg>
+        </button>
+        <button id="pressure-close" title="Close">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><polygon fill-rule='evenodd' points='8 9.414 3.707 13.707 2.293 12.293 6.586 8 2.293 3.707 3.707 2.293 8 6.586 12.293 2.293 13.707 3.707 9.414 8 13.707 12.293 12.293 13.707 8 9.414'/></svg>
+        </button>
       </div>
       <div id="pressureModal-content">
         <h3>Pressure (pa)</h3>
@@ -154,8 +166,12 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
 
     <div id="heatfluxModal">
       <div id="modalButtonContainer">
-        <button id="heatflux-copy-button">Copy the data</button>
-        <button id="heatflux-close">Close</button>
+        <button id="heatflux-copy-button" title="Copy Data">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'><path d='M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z'/></svg>
+        </button>
+        <button id="heatflux-close" title="Close">
+        <?xml version='1.0' ?><svg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><polygon fill-rule='evenodd' points='8 9.414 3.707 13.707 2.293 12.293 6.586 8 2.293 3.707 3.707 2.293 8 6.586 12.293 2.293 13.707 3.707 9.414 8 13.707 12.293 12.293 13.707 8 9.414'/></svg>
+        </button>
       </div>
       <div id="heatfluxModal-content">
         <h3>Heat Flux (W/m<sup>2</sup>)</h3>
