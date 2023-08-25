@@ -133,10 +133,26 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
       <div id="dragModal-content">
         <h3>Drag any following object you want</h3>
         <div id="shape-box">
-          <div id="rectangle" draggable="true"></div>
-          <div id="ellipse" draggable="true"></div>
-          <div id="triangle" draggable="true"></div>
-          <div id="airfoil" draggable="true"></div>
+          <div id="rectangle" draggable="true">
+            <?xml version='1.0' ?><svg width='55' height='30' xmlns='http://www.w3.org/2000/svg'>
+              <rect height='25' opacity='0.2' rx='' width='3.5rem' x='1' y='1'/><rect fill='none' height='25' rx='' stroke='#B02D24' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' width='50' x='3' y='3'/>
+            </svg>
+          </div>
+          <div id="ellipse" draggable="true">
+            <svg width='55' height='30' style='enable-background:new 0 0 592.7 442;' version='1.1' viewBox='0 0 470.7 442' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+              <ellipse cx='270' cy='220' rx='350' ry='180' style='fill:#CBCBCB;stroke:#B02D24;stroke-width:50'></ellipse>
+            </svg>
+          </div>
+          <div id="triangle" draggable="true">
+            <svg width='55' height='30' style='enable-background:new 0 0 592.7 442;' version='1.1' viewBox='0 0 1660 800' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+              <polygon points='150,800 1600,800 850,100' style='fill:#CBCBCB;stroke:#B02D24;stroke-width:70' />
+            </svg>
+          </div>
+          <div id="airfoil" draggable="true">
+            <svg version='1.0' xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 1280.000000 283.000000' preserveAspectRatio='xMidYMid meet'>
+              <g transform='translate(0.000000,283.000000) scale(0.100000,-0.100000)' fill='#B02D24' stroke='#B02D24' stroke-width='400'><path d='M2020 2819 c-866 -51 -1539 -304 -1851 -697 -106 -133 -168 -293 -169 -433 -1 -270 312 -548 796 -708 266 -88 516 -133 844 -152 207 -11 279 -9 755 21 1150 74 1890 100 2845 100 1083 0 1833 -38 2700 -136 722 -81 1228 -164 2505 -409 656 -126 997 -190 1340 -250 352 -61 947 -155 985 -155 25 0 30 4 30 24 0 16 -7 27 -20 31 -12 4 -81 35 -154 70 -228 108 -629 292 -901 412 -3257 1438 -6099 2185 -8690 2283 -306 11 -813 11 -1015 -1z m1135 -69 c2304 -106 4767 -712 7600 -1870 654 -267 1761 -761 1723 -768 -36 -7 -975 156 -1693 294 -187 36 -457 88 -600 115 -672 129 -1110 205 -1650 284 -1649 242 -3557 276 -6140 110 -621 -40 -899 -31 -1259 41 -491 99 -894 321 -1026 564 -34 64 -35 67 -35 180 0 135 16 186 92 308 190 305 635 547 1228 667 152 31 448 69 595 78 138 8 967 6 1165 -3z'/></g>
+            </svg>
+          </div>
         </div>
         <div id="draw-box">
           <h3>Draw any polygons you want except rectangle, circle, triangle</h3>
