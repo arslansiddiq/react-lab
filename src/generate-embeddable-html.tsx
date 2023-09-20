@@ -184,7 +184,7 @@ export const generateEmbeddableHTML = (labDistPath = "lab/") => `
     </div>
     <div id="shapeModal">
       <div id="shapeModal-content">
-        <h4>Change Properties</h4>
+        <h4>Properties</h4>
         <form id="change-form"></form>
       </div>
       <button id="save">Save</button>
